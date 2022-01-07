@@ -23,7 +23,8 @@ The call require you to have 1 DAI and 1.5 MATIC
 You will make a 1000 DAI loan and repay it back. It will cost you 0,90 DAI in loan fees charge by AAVE an 1 MATIC sent as msg.value that you pay only of you make a successful trade.
 
 
-Once you have fund your wallet you can run the demo1. You can also make customs calls of you own.
+Once you have fund your wallet you can run the demo1. You can also make customs calls of your own.
 
 
 Please open an issue if you run into one!
+
