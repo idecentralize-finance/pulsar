@@ -1,5 +1,11 @@
 require("dotenv").config();
 
+require("@nomiclabs/hardhat-etherscan");
+require("@nomiclabs/hardhat-waffle");
+require("hardhat-gas-reporter");
+require("solidity-coverage");
+
+
 // ABI Of the call we want to make
 const FLASH_LOAN_ABI = require('./abis/flashLoan.json');
 const TRANSFER_FROM_ABI = require('./abis/transferFrom.json');
@@ -19,7 +25,7 @@ task(
   "run-demo1", 
   "Execute the demo1 sequence", 
   async (_, {network, ethers, upgrades }) => {
-    let override = { gasLimit: 3000000 };
+    let override = { gasLimit: 4000000 };
 
     const signer = ethers.provider.getSigner(
             process.env.ADDRESS
@@ -47,8 +53,8 @@ task(
       // make sure to consume the allowance or reset it when you done.
       // otherwise i can send a call to the contract  and withdraw the allowance you did not rest
       // only approve what you need and always reset the allowance.
-       await dai.approve(PULSAR, oneDai, override);   
-
+       let tx = await dai.approve(PULSAR, oneDai, override);   
+       tx.wait(1)
        // define your trade sequence call
        // they are arrays because you can borrow multiple assets
        // See Aave Doc mor mode. or leave it to 0
@@ -96,12 +102,12 @@ task(
          sig = "flashLoanCall((address[],uint256[],uint[]),bytes)";
          let data = iface.encodeFunctionData(sig,[loanSequence,tradeSequence])
 
-        const tx = await signer.sendTransaction({
+        const call = await signer.sendTransaction({
             to: PULSAR,
             data: data,        // change data here
             value: ethers.utils.parseUnits("1.0", "ether")
         });
-        // tx.wait(1)
+         call.wait(1)
 
 
         console.log("Trade Executed")

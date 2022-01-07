@@ -1,5 +1,9 @@
 require("dotenv").config();
 
+require("@nomiclabs/hardhat-etherscan");
+require("@nomiclabs/hardhat-waffle");
+require("hardhat-gas-reporter");
+require("solidity-coverage");
 
 const FLASH_LOAN_ABI = require('./abis/flashLoan.json');
 const APPROVE_ABI = require('./abis/approve.json');
