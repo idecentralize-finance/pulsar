@@ -14,7 +14,7 @@ or directly with npm install
 
 ```npm i @idecentralize/pulsar```
 
-Once installed edit and rename your env.example file to .env. Make sure to never share this file.
+Once installed edit and **rename your env.example file to .env**. Make sure to never share this file.
 
 
 We have created a demo1 call so you can validate the call.
@@ -24,3 +24,6 @@ You will make a 1000 DAI loan and repay it back. It will cost you 0,90 DAI in lo
 
 
 Once you have fund your wallet you can run the demo1. You can also make customs calls of you own.
+
+
+Please open an issue if you run into one!

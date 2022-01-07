@@ -1,6 +1,6 @@
 {
   "name": "@idecentralize/pulsar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create custom trading strategies without deploying smart contract",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   ],
   "author": "Ian Dorion",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-etherscan": "^2.1.8",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
