@@ -1,9 +1,5 @@
 require("dotenv").config();
-
-require("@nomiclabs/hardhat-etherscan");
-require("@nomiclabs/hardhat-waffle");
-require("hardhat-gas-reporter");
-require("solidity-coverage");
+require("ethers")
 
 
 // ABI Of the call we want to make
@@ -53,8 +49,8 @@ task(
       // make sure to consume the allowance or reset it when you done.
       // otherwise i can send a call to the contract  and withdraw the allowance you did not rest
       // only approve what you need and always reset the allowance.
-       let tx = await dai.approve(PULSAR, oneDai, override);   
-       tx.wait(1)
+    //    let tx = await dai.approve(PULSAR, oneDai, override);   
+    //    tx.wait(2)
        // define your trade sequence call
        // they are arrays because you can borrow multiple assets
        // See Aave Doc mor mode. or leave it to 0

@@ -1,9 +1,11 @@
 require("dotenv").config();
 
-require("@nomiclabs/hardhat-etherscan");
-require("@nomiclabs/hardhat-waffle");
-require("hardhat-gas-reporter");
-require("solidity-coverage");
+const { task } = require("hardhat/config");
+
+require("hardhat/config");
+require("dotenv").config();
+require("@nomiclabs/hardhat-ethers");
+
 
 const FLASH_LOAN_ABI = require('./abis/flashLoan.json');
 const APPROVE_ABI = require('./abis/approve.json');
@@ -22,7 +24,7 @@ const WETH = "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619";
 require("./demo1.js");
 
 // to execute a task, in a terminal
-// npx hardhat demo1.js
+// npx hardhat run-demo1
 
 // for support for more complex strategies join out discord
 // https://discord.gg/y58xv2Gn

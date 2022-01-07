@@ -45,8 +45,26 @@ task(
             borrowedAmounts,
             borrowedModes
         ]
+          
 
-         let iface = new ethers.utils.Interface(JSON.stringify(TRANSFER_FROM_ABI));
+        // Oninch swap call
+        
+        // struct SwapDescription {
+        //     IERC20 srcToken;
+        //     IERC20 dstToken;
+        //     address srcReceiver;
+        //     address dstReceiver;
+        //     uint256 amount;
+        //     uint256 minReturnAmount;
+        //     uint256 guaranteedAmount;
+        //     uint256 flags;
+        //     address referrer;
+        //     bytes permit;
+        // }
+    
+
+         // we would need to approve oneInch to pull the funds that we borrowed
+         let iface = new ethers.utils.Interface(JSON.stringify(ONE_INCH_SWAP));
          let sig = "swap(address, (address,address,address,address,uint256,uint256,uint256,bytes), bytes)";
          let data1 = iface.encodeFunctionData(sig,[process.env.ADDRESS,PULSAR,oneDai])
 
