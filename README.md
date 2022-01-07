@@ -6,7 +6,13 @@ You can use pulsar for you trading bot as well.
 
 ## install
 
-clone this repo and run npm install
+clone this repo and run 
+
+```npm install```.
+
+or directly with npm install
+
+```npm i @idecentralize/pulsar```
 
 Once installed edit and rename your env.example file to .env. Make sure to never share this file.
 
