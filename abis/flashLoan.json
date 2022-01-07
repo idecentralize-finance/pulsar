@@ -1,0 +1,35 @@
+[    {
+  "inputs": [
+    {
+      "components": [
+        {
+          "internalType": "address[]",
+          "name": "assets",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "modes",
+          "type": "uint256[]"
+        }
+      ],
+      "internalType": "struct Sequencer.LoanSequence",
+      "name": "loanData",
+      "type": "tuple"
+    },
+    {
+      "internalType": "bytes",
+      "name": "tradeData",
+      "type": "bytes"
+    }
+  ],
+  "name": "flashLoanCall",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+}]

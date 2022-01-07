@@ -1,0 +1,38 @@
+{
+  "name": "pulsar",
+  "version": "1.0.0",
+  "description": "Create custom trading strategies without deploying smart contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "DEFI",
+    "flashloan",
+    "crypto",
+    "exchange",
+    "flash",
+    "laon",
+    "cheap",
+    "polygon"
+  ],
+  "author": "Ian Dorion",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.4",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.8.1"
+
+
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idecentralize-finance/pulsar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idecentralize-finance/pulsar/issues"
+  },
+  "homepage": "https://github.com/idecentralize-finance/pulsar#readme"
+}
